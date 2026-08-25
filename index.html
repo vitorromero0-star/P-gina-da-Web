@@ -5,71 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copa</title>
     <style>
-        header{
+        header {
             background-color: darkgreen;
             color: white;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
-            padding: 16Px;
+            padding: 16px;
             border: 5px solid gold;
         }
         main {
             background-color: white;
-            color:darkgreen;
+            color: darkgreen;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
             border-left: 4px solid rgb(228, 224, 4);
             border-right: 4px solid rgb(230, 226, 1);
-            min-height: calc(100hv -120px);
+            min-height: calc(100vh - 120px);
         }
-        img{
-            width: 80px;
-            height: 80px;
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
         }
-       div p{
+        div p {
             font-weight: bold;
         }
-
+        button {
+            cursor: pointer;
+            padding: 8px 16px;
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body>
+
 <header>
-    <h1>⚽​Universo da Copa do Mundo</h1>
-    <p> Tudo sobre a maior competição de Futebol do planeta: Jogos, seleções, curiosidades e muito mais!
-        
-        
-        
-    </p>
+    <h1>⚽ Universo da Copa do Mundo</h1>
+    <p>Tudo sobre a maior competição de Futebol do planeta: Jogos, seleções, curiosidades e muito mais!</p>
 </header>
 
 <main> 
-    <img src= "Gemini_Generated_Image_kqg7fkqg7fkqg7fk.png" alt="Fotografia panorâmica de um estádio de futebol lotado durante um jogo da Copa do Mundo ao pôr do sol. Em primeiro plano, torcedores com camisas e bandeiras do Brasil e da Argentina celebram juntos na arquibancada. Ao fundo, o campo verdejante e um grande painel digital onde se lê "Copa do Mundo">
+    <img src="Gemini_Generated_Image_kqg7fkqg7fkqg7fk.png" alt="Fotografia panorâmica de um estádio de futebol lotado durante um jogo da Copa do Mundo ao pôr do sol. Em primeiro plano, torcedores com camisas e bandeiras do Brasil e da Argentina celebram juntos na arquibancada. Ao fundo, o campo verdejante e um grande painel digital onde se lê 'Copa do Mundo'">
+    
     <div>
-
         <h2>Bem-vindo ao Mundial!</h2>
-    <p> Por: Vitor Romero</p>
-    <p>Seja bem-vindo ao Portal da Copa do Mundo! Aqui você encontrará notícias, resultados, tabelas, curiosidades, história das seleções, estatísticas dos jogadores e todas as novidades sobre o maior campeonato de futebol do mundo. </p>
-  <button>❤️<span>0</span></button>
-  <button> 👍​<span>0</span></button>
-    <div>
+        <p>Por: Vitor Romero</p>
+        <p>Seja bem-vindo ao Portal da Copa do Mundo! Aqui você encontrará notícias, resultados, tabelas, curiosidades, história das seleções, estatísticas dos jogadores e todas as novidades sobre o maior campeonato de futebol do mundo.</p>
+        <button>❤️ <span>0</span></button>
+        <button>👍 <span>0</span></button>
+    </div>
 </main>
     
-</body>
 <script>
-    const botao = document.querySelectorAll("button");
+    const botoes = document.querySelectorAll("button");
 
-botoes.forEach(function(botao) {
-botao.addEventListener("click", botaoClicado);
-
-    function botaoClicado() {
-    console.log("fui clicado");
-     let texto = botao.querySelector("span");
-    texto.textContent++;
-}
-});
-
-  
+    botoes.forEach(function(botao) {
+        botao.addEventListener("click", function() {
+            let texto = botao.querySelector("span");
+            texto.textContent = parseInt(texto.textContent) + 1;
+        });
+    });
 </script>
-<html>
+
+</body>
+</html>
