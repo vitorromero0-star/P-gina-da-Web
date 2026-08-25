@@ -51,9 +51,18 @@
         <h2>Bem-vindo ao Mundial!</h2>
     <p> Por: Vitor Romero</p>
     <p>Seja bem-vindo ao Portal da Copa do Mundo! Aqui você encontrará notícias, resultados, tabelas, curiosidades, história das seleções, estatísticas dos jogadores e todas as novidades sobre o maior campeonato de futebol do mundo. </p>
-    
+
     <div>
 </main>
     
 </body>
+<script>
+    const botao = document.querySelector("button");
+botao.addEventListener("click", botaoClicado);
+
+   function botaoClicado() {
+let texto = botao.querySelector("span");
+texto.textContent++;
+}
+</script>
 <html>
